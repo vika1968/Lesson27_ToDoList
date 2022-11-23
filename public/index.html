@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson27 DOM</title>
+    <link href="./index.css" rel="stylesheet">
+    <!-- https://pixabay.com/  free imges-->
+</head>
+<body>
+
+    <div class="main-container">  
+        <h3>Todo List</h3> 
+
+            <div class="container-tasks">
+                <form class ="form">
+                    <div class="tasks" >
+                        <label for="newtask" class="lblnewtask">Task name : </label>                         
+                        <input type="text" id="newtask" placeholder="enter your task here ..." required /><br><br>           
+                    </div>    
+
+                    <div class="btn"> 
+                        <button class="submit" type="submit">ADD NEW</button>
+                     </div> 
+                </form>           
+            </div>
+
+             <ul>  
+                <div>
+                    <li>Wash the dog<img src="./images/1.webp"/></li>
+                 </div>
+                 <div>
+                    <li>Make dinner<img src="./images/1.webp"/></li>
+                 </div>
+                 <div>
+                    <li>Take shawer<img src="./images/1.webp"/></li>
+                 </div>                
+            </ul>
+    </div>  
+       
+
+     <!-- Connect the JS file -->
+     <script script src="./index.js"> </script> 
+</body>
+</html>

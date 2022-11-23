@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(180, 232, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body, html {
+    height: 100%;
+    align-items: center;
+}
+
+.main-container {
+    width: 30%;
+    
+    h3 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        margin-top: 20px;
+        list-style: none;
+        list-style-position: inside;
+        width: 100%;
+
+        li { 
+            font-size: 30px;
+            margin-top: 3px;
+            padding: 10px;
+            border: 2px solid salmon;
+            border-radius: 35px;  
+        }
+
+        /* When clicked on, add a background color and strike out text */
+        li.checked {
+            background: rgb(154, 151, 151); 
+            color: #fff; 
+            text-decoration: line-through;
+        }        
+          
+        /* Add a "checked" mark when clicked on */
+        li.checked::before {             
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;    
+            height: 15px;
+            width: 7px;
+        }
+    }    
+}
+
+.container-tasks {
+    font-size: 30px;
+    background-color: white;
+    padding: 20px 30px;
+    border: 2px solid salmon;
+    border-radius: 35px;
+
+    #newtask {
+            width: 60%;
+            height:20px;
+        }
+}
+
+.btn {
+    text-align: center;
+    .submit {
+        padding: 5px;
+        border-radius: 35px;
+    }    
+}
+
+img {
+    height: 35px;
+    width: 35px;
+    float: right;
+}
+
+.main-container ul li:hover, .main-container h3:hover {
+    background-color: white; 
+    color: red;
+}    
+
+
