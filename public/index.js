@@ -15,26 +15,23 @@ function onSubmit(e) {
         newli.appendChild(newimg);
         newdiv.appendChild(newli);
         ul.appendChild(newdiv);
-        for (let i = 0; i < img.length; i++) {
-            img[i].addEventListener("click", () => {
-                let parent = img[i].parentElement;
-                parent.style.display = "none";
-            });
-        }
+        addEventToTask();
         newTask.value = "";
     }
 }
-for (let i = 0; i < img.length; i++) {
-    img[i].addEventListener("click", () => {
-        console.log("asdasdasdasd");
-        let parent = img[i].parentElement;
-        parent.style.display = "none";
-    });
+function addEventToTask() {
+    for (let i = 0; i < img.length; i++) {
+        img[i].addEventListener("click", () => {
+            let parent = img[i].parentElement;
+            parent.style.display = "none";
+        });
+    }
 }
+addEventToTask();
 // Add a "checked" symbol when clicking on a list item
 let list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
-    if (ev.target.tagName == 'LI') {
-        ev.target.classList.toggle("checked");
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
     }
 }, false);
