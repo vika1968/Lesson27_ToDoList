@@ -19,27 +19,23 @@ function onSubmit(e: any){
         newli.textContent = newTask.value 
         newli.appendChild(newimg)    
         newdiv.appendChild(newli)    
-        ul.appendChild(newdiv)  
-
-        for (let i = 0; i < img.length; i++) {
-            img[i].addEventListener("click" , () => {
-                let parent = img[i].parentElement;
-                parent!.style.display = "none"}
-            
-            )
-        }  
+        ul.appendChild(newdiv)        
+        addEventToTask()
         newTask.value = ""        
      }     
 }
 
-
-for (let i = 0; i < img.length; i++) {
-    img[i].addEventListener("click" , () => {      
-        let parent = img[i].parentElement      
-        parent!.style.display = "none"
-        }
-    )
+  function addEventToTask(){
+    for (let i = 0; i < img.length; i++) {
+      img[i].addEventListener("click" , () => {      
+          let parent = img[i].parentElement      
+          parent!.style.display = "none"
+          }
+      )
+    }  
   }
+
+  addEventToTask()
 
 // Add a "checked" symbol when clicking on a list item
 let list = document.querySelector('ul');
