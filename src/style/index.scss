@@ -31,29 +31,35 @@ body, html {
         width: 100%;
 
         li { 
+            cursor: pointer;
+            position: relative;
             font-size: 30px;
             margin-top: 3px;
-            padding: 10px;
+            padding: 12px 8px 12px 40px;
             border: 2px solid salmon;
             border-radius: 35px;  
         }
 
         /* When clicked on, add a background color and strike out text */
         li.checked {
-            background: rgb(154, 151, 151); 
+            background: rgb(169, 166, 166); 
             color: #fff; 
             text-decoration: line-through;
         }        
           
         /* Add a "checked" mark when clicked on */
         li.checked::before {             
-            border-color: #fff;
-            border-style: solid;
-            border-width: 0 2px 2px 0;
-            top: 10px;
-            left: 16px;    
-            height: 15px;
-            width: 7px;
+        content: '';
+        color: red;
+        position: absolute;
+        border-color: rgb(180, 44, 44);
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        top: 10px;
+        left: 16px;
+        transform: rotate(45deg);
+        height: 25px;
+        width: 9px;       
         }
     }    
 }
@@ -74,8 +80,12 @@ body, html {
 .btn {
     text-align: center;
     .submit {
-        padding: 5px;
+        padding: 15px;
         border-radius: 35px;
+         width: 30%;
+        border: 2px solid salmon;
+        color: red;
+        font-weight: bold;
     }    
 }
 
@@ -89,5 +99,9 @@ img {
     background-color: white; 
     color: red;
 }    
+
+.submit:hover {
+    background-color: #bbb;
+  }
 
 
